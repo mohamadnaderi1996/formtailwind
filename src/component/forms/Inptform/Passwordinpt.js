@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function passwordInpt() {
+export default function passwordInpt(props) {
   return (
-    <div>
+    <div  className='mx-auto'>
     <label className='m-3'>password:</label>
-     <input className='border rounded-md' type="password" placeholder='  password..'/>
+     <input onChange={(event)=>{props.setPassChange(event.target.value)}}
+      className='border rounded-md' type="password" placeholder='  password..'/>
   </div>
   )
 }

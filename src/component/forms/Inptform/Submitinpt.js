@@ -1,10 +1,18 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
-export default function submitInpt() {
+export default function submitInpt(props) {
 
+  let validations=()=>{
+    if(props.validation){
+      props.navigate('/Anotherpage')
+  }else{
+    props.validate('/validate')
+  }
+
+
+}
   return (
     <>
-      <Link to="/Anotherpage"><button  className='border w-full h-2/3 rounded-2xl bg-blue-600'>Submit</button></Link> 
+      <button onClick={validations} className='border w-full h-2/3 rounded-2xl border-none bg-blue-600'>Submit</button>
     </>
  
   )
