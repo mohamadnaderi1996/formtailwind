@@ -5,7 +5,8 @@ export default function submitInpt(props) {
     if(props.validation){
       props.navigate('/Anotherpage')
   }else{
-    props.validate('/validate')
+    // props.validate('/validate')
+    alert("رمز اشتباه است")
   }
 
 
